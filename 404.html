@@ -3,17 +3,9 @@ title: 404
 ---
 <head>
     <script language="javascript" type="text/javascript">
-        <script src="http://cdn.bootcss.com/purl/2.3.1/purl.min.js"></script>
-        <script>
-            var url = purl();
-            if (url.attr('host') == 'liaojieliang.com'
-                || url.attr('host') == 'www.liaojieliang.com') {
-                var old_url = url.attr('source');
-                var new_url = old_url.replace(url.attr('host'), "liaojieliang.gitee.io");
-                window.location.replace(new_url); 
-            }else {
-                window.location.href="https://liaojieliang.gitee.io/";
-            }
-        </script>
+        var old_url = window.location.href;
+        //var new_url = old_url.replace("127.0.0.1:4000", "liaojieliang.gitee.io");
+        var new_url = old_url.replace("liaojieliang.com", "liaojieliang.gitee.io");
+        window.location.replace(new_url); 
     </script>
 </head>
